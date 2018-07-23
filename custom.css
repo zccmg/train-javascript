@@ -1,0 +1,76 @@
+html {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background-color: #EEEEEE;
+	margin: 0;
+}
+
+th {
+	text-align: left;
+}
+
+#loader {transition: 1s;}
+
+#mainHeader {
+	background-color: #fff;
+	padding: 20px;
+	overflow: hidden;
+}
+
+#mainTitle {
+	float: left;
+	width: 40%;
+}
+
+#mainTitle h1 {
+	color: #1BBC9B;
+}
+
+#mainHeader nav {
+	float: right;
+	width: 60%;
+}
+
+#mainHeader nav ul {
+	list-style: none;
+}
+
+#mainHeader nav ul li {
+	float: left;
+}
+
+#mainHeader nav ul li a {
+	color: #444;
+	text-decoration: none;
+	padding: 10px; 
+	transition:1s;
+}
+
+#mainHeader nav ul li a:hover {
+	color: #999;
+	background-color: #EEEEEE;
+}
+
+#banner {
+	background: url(images/banner-2.jpg) no-repeat center fixed;
+	height: 400px;
+	overflow: hidden;
+}
+
+#banner h2, #banner p {
+	text-align: center;
+	color: #fff;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+#welcomeMsg {
+	margin: 7% auto;
+	width: 25%;
+}
+
+#welcomeMsg img {
+	margin: 0 33%;
+}
