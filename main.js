@@ -1,26 +1,36 @@
-var user = {
-	name: "Jaamac",
-	age: 32,
-	birth: new Date("1980-09-08"),
-	brothers: ["Mustaf", "Mayaw", "Xirsi"],
-	printInfo: function () {
-		var table = document.getElementsByTagName("table")[0]
-		table.style.display = "block";
-		
-		var tds = table.getElementsByTagName("td")
+function Cal(startPoint) {
+	
+	this.value = startPoint
 
-		tds[0].textContent = user.name;
-		tds[1].textContent = user.age;
-		tds[2].textContent = user.birth.getFullYear();
-		tds[3].textContent = user.brothers.join(", ");
+	this.add = function(val) {
+		this.value += val
+		return this
 	}
+
+	this.sub = function(val) {
+		this.value -= val
+		return this
+	}
+
+
+	this.mul = function(val) {
+		this.value *= val
+		return this
+	}
+
+	this.result = function() {
+		return this.value;
+	}
+
+	return this
 }
 
+var cal = new Cal(3).add(3)
+var cal2 = new Cal(10).add(4)
 
-window.onload = function() {
-	var loader = document.getElementById("loader");
-	setTimeout(function() {
-		loader.style.display = "none"
-		user.printInfo();
-	}, 2000)
-};
+cal.add(5).sub(3).mul(2)
+cal2.sub(3)
+
+
+console.log("Result 1:", cal.result())
+console.log("Result 2:", cal2.result())
